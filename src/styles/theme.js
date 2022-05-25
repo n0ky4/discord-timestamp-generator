@@ -19,6 +19,7 @@ const theme = {
         text_brand: 'hsl(235, 86.1%, 77.5%)',
         background_primary: '#36393f',
         background_secondary: '#2f3136',
+        background_timestamp: 'rgba(79,84,92,0.48)',
         text_input_border: '#040405',
         text_input_placeholder: '#707277',
         text_input_color: '#f6f6f7',
