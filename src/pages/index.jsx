@@ -5,7 +5,24 @@ import Input from '../components/Input'
 import Text from '../components/Text'
 import Timestamp from '../components/Timestamp'
 import Moment from 'react-moment'
-import 'moment-timezone'
+import 'moment'
+import 'moment/min/locales'
+import CodeBlock from '../components/CodeBlock'
+
+const TimestampContainer = (props) => {
+    return (
+        <div
+            style={{
+                display: 'flex',
+                gap: '6px',
+                alignItems: 'center',
+                marginTop: '5px',
+            }}
+        >
+            {props.children}
+        </div>
+    )
+}
 
 export default function Home() {
     const yearRef = useRef(null)
@@ -60,8 +77,8 @@ export default function Home() {
 
     useEffect(() => {
         let _date = new Date()
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-        console.log(tz)
+
+        console.log(navigator.languages[0])
 
         const year = yearRef.current
         const month = monthRef.current
@@ -159,11 +176,100 @@ export default function Home() {
                 </Text>
             </div>
             <div style={{ margin: '25px 0' }}>
-                <Text>Timestamp Type:</Text>
-                <div style={{ display: 'flex', gap: '6px' }}>
-                    <Timestamp>
-                        <Moment date={date} fromNow />
-                    </Timestamp>
+                <Text>Generated Timestamps:</Text>
+                <Text muted>
+                    To use it, copy the code on the left then paste it on your message or profile
+                    bio.
+                </Text>
+                <div>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LLL'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:D>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LL'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:d>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='L'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:F>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LLLL'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:f>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LLL'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:R>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                fromNow
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:T>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LTS'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:t>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment
+                                locale={navigator.languages[0].toLowerCase()}
+                                date={date}
+                                format='LT'
+                            />
+                        </Timestamp>
+                    </TimestampContainer>
                 </div>
             </div>
         </Container>
