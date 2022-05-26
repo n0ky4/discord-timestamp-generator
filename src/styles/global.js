@@ -23,6 +23,18 @@ const GlobalStyle = createGlobalStyle`
         -moz-appearance: textfield;
     }
 
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${(props) => props.theme.colors.background_secondary};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${(props) => props.theme.colors.background_tertiary};
+        border-radius: 999px;
+    }
 `
 
 export default GlobalStyle

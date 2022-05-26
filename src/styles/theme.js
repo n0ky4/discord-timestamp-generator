@@ -18,7 +18,7 @@ const theme = {
         text_danger: 'hsl(359, 82%, 73.9%)',
         text_brand: 'hsl(235, 86.1%, 77.5%)',
         background_primary: '#36393f',
-        background_secondary: '#2f3136',
+        background_secondary: '#2e3338',
         background_tertiary: '#202225',
         background_timestamp: 'rgba(79,84,92,0.48)',
         text_input_border: '#040405',
