@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 
 const TextStyle = styled.p`
@@ -5,6 +6,12 @@ const TextStyle = styled.p`
         props.muted ? props.theme.colors.text_muted : props.theme.colors.text_normal};
 `
 
-export default function Text(props) {
-    return <TextStyle {...props}>{props.children}</TextStyle>
-}
+const Text = forwardRef((props, ref) => (
+    <TextStyle {...props} ref={ref}>
+        {props.children}
+    </TextStyle>
+))
+
+Text.displayName = 'Text'
+
+export default Text

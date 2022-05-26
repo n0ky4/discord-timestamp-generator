@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 
 const InputStyle = styled.input`
@@ -26,10 +27,12 @@ const InputStyle = styled.input`
         props.secondary ? props.theme.colors.header_secondary : props.theme.colors.header_primary};
 `
 
-export default function Input(props) {
-    return (
-        <InputStyle type='text' {...props}>
-            {props.children}
-        </InputStyle>
-    )
-}
+const Input = forwardRef((props, ref) => (
+    <InputStyle type='text' {...props} ref={ref}>
+        {props.children}
+    </InputStyle>
+))
+
+Input.displayName = 'Input'
+
+export default Input
