@@ -7,6 +7,7 @@ import Input from '../components/Input'
 import Text from '../components/Text'
 import Timestamp from '../components/Timestamp'
 import CodeBlock from '../components/CodeBlock'
+import LanguageSelect from '../components/LanguageSelect'
 
 // Date/moment stuff
 import { dateToUnix, getMomentFormat } from '../util/date'
@@ -109,7 +110,16 @@ export default function Home() {
     return (
         <Container>
             <div>
-                <Heading>Discord Timestamp Generator</Heading>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                    }}
+                >
+                    <Heading>Discord Timestamp Generator</Heading>
+                    <LanguageSelect />
+                </div>
                 <Text muted>{t('description')}</Text>
             </div>
             <div style={{ margin: '18px 0' }}>
