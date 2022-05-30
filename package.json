@@ -10,6 +10,7 @@
         "moment-timezone": "^0.5.34",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
+        "react-hot-toast": "^2.2.0",
         "react-moment": "^1.1.2",
         "react-scripts": "5.0.1",
         "styled-components": "^5.3.5",
