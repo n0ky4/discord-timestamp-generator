@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import toast from 'react-hot-toast'
+import { copyToClipboard } from '../../util/copyToClipboard'
 
 const CodeBlockStyle = styled.code`
     cursor: ${(props) => (props.copyOnClick ? 'pointer' : 'auto')};
@@ -21,35 +22,47 @@ const CodeBlockStyle = styled.code`
 
 export default function CodeBlock(props) {
     function copyText(text) {
-        const input = document.createElement('input')
-        input.style.position = 'fixed'
-        input.style.opacity = 0
-        input.width = 1
-        input.value = text
-        document.body.appendChild(input)
-        input.select()
-        document.execCommand('copy')
-        document.body.removeChild(input)
-
-        toast.success('Copied to clipboard!', {
-            duration: 2000,
-            position: 'top-right',
-            style: {
-                fontSize: '16px',
-                borderRadius: '3px',
-                border: '1px solid #5865f2',
-                padding: '10px',
-                color: '#fff',
-                background: '#2e3338',
-            },
-            iconTheme: {
-                primary: '#5865f2',
-                secondary: '#FFFAEE',
-            },
-        })
+        copyToClipboard(text)
+            .then(() => {
+                toast.success('Copied to clipboard!', {
+                    duration: 2000,
+                    position: 'top-right',
+                    style: {
+                        fontSize: '16px',
+                        borderRadius: '3px',
+                        border: '1px solid #5865f2',
+                        padding: '10px',
+                        color: '#fff',
+                        background: '#2e3338',
+                    },
+                    iconTheme: {
+                        primary: '#5865f2',
+                        secondary: '#FFFAEE',
+                    },
+                })
+            })
+            .catch((err) => {
+                console.log(err)
+                toast.error('Could not copy to clipboard :(', {
+                    duration: 2000,
+                    position: 'top-right',
+                    style: {
+                        fontSize: '16px',
+                        borderRadius: '3px',
+                        border: '1px solid #ed4245',
+                        padding: '10px',
+                        color: '#fff',
+                        background: '#2e3338',
+                    },
+                    iconTheme: {
+                        primary: '#ed4245',
+                        secondary: '#FFFAEE',
+                    },
+                })
+            })
     }
 
-    function handleClick(e) {
+    function handleClick() {
         if (props.copyOnClick) {
             copyText(props.children)
         }

@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
+
+// Components
 import Container from '../components/Container'
 import Heading from '../components/Heading'
 import Input from '../components/Input'
 import Text from '../components/Text'
 import Timestamp from '../components/Timestamp'
+import CodeBlock from '../components/CodeBlock'
+
+// Date/moment stuff
+import { dateToUnix, getMomentFormat } from '../util/date'
 import Moment from 'react-moment'
 import 'moment'
 import 'moment/min/locales'
-import CodeBlock from '../components/CodeBlock'
 
 const TimestampContainer = (props) => {
     return (
@@ -33,6 +38,8 @@ export default function Home() {
     const secondRef = useRef(null)
     const timestampRef = useRef(null)
     const [date, setDate] = useState(new Date())
+
+    const momentLocale = navigator.languages[0].toLowerCase()
 
     function validate(value, type) {
         value = value.replace(/[^0-9]/g, '')
@@ -77,8 +84,6 @@ export default function Home() {
 
     useEffect(() => {
         let _date = new Date()
-
-        console.log(navigator.languages[0])
 
         const year = yearRef.current
         const month = monthRef.current
@@ -182,106 +187,82 @@ export default function Home() {
                 </Text>
                 <div>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment locale={momentLocale} date={date} format={getMomentFormat()} />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:D>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                format='LLL'
+                                format={getMomentFormat('D')}
                             />
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:D>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:d>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                format='LL'
+                                format={getMomentFormat('d')}
                             />
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:d>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:F>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                format='L'
+                                format={getMomentFormat('F')}
                             />
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:F>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:f>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                format='LLLL'
+                                format={getMomentFormat('f')}
                             />
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:f>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:R>`}</CodeBlock>
+                        <Text muted>—</Text>
+                        <Timestamp>
+                            <Moment locale={momentLocale} date={date} fromNow />
+                        </Timestamp>
+                    </TimestampContainer>
+                    <TimestampContainer>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:T>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                format='LLL'
+                                format={getMomentFormat('T')}
                             />
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:R>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}:t>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
-                                locale={navigator.languages[0].toLowerCase()}
+                                locale={momentLocale}
                                 date={date}
-                                fromNow
-                            />
-                        </Timestamp>
-                    </TimestampContainer>
-                    <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:T>`}</CodeBlock>
-                        <Text muted>—</Text>
-                        <Timestamp>
-                            <Moment
-                                locale={navigator.languages[0].toLowerCase()}
-                                date={date}
-                                format='LTS'
-                            />
-                        </Timestamp>
-                    </TimestampContainer>
-                    <TimestampContainer>
-                        <CodeBlock copyOnClick>{`<t:${Math.floor(
-                            date.getTime() / 1000
-                        )}:t>`}</CodeBlock>
-                        <Text muted>—</Text>
-                        <Timestamp>
-                            <Moment
-                                locale={navigator.languages[0].toLowerCase()}
-                                date={date}
-                                format='LT'
+                                format={getMomentFormat('t')}
                             />
                         </Timestamp>
                     </TimestampContainer>
