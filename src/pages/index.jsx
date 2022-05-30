@@ -183,7 +183,9 @@ export default function Home() {
                 </Text>
                 <div>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -194,7 +196,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:D>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:D>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -205,7 +209,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:d>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:d>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -216,7 +222,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:F>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:F>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -227,7 +235,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:f>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:f>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -238,7 +248,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:R>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:R>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -249,7 +261,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:T>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:T>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
@@ -260,7 +274,9 @@ export default function Home() {
                         </Timestamp>
                     </TimestampContainer>
                     <TimestampContainer>
-                        <CodeBlock>{`<t:${Math.floor(date.getTime() / 1000)}:t>`}</CodeBlock>
+                        <CodeBlock copyOnClick>{`<t:${Math.floor(
+                            date.getTime() / 1000
+                        )}:t>`}</CodeBlock>
                         <Text muted>—</Text>
                         <Timestamp>
                             <Moment
