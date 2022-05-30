@@ -1,7 +1,6 @@
 import { useTheme } from 'styled-components'
 import styled from 'styled-components'
 import toast from 'react-hot-toast'
-import { copyToClipboard } from '../../util/copyToClipboard'
 
 const CodeBlockStyle = styled.code`
     cursor: ${(props) => (props.copyOnClick ? 'pointer' : 'auto')};
@@ -25,7 +24,8 @@ export default function CodeBlock(props) {
     const theme = useTheme()
 
     function copyText(text) {
-        copyToClipboard(text)
+        navigator.clipboard
+            .writeText(text)
             .then(() => {
                 toast.success('Copied to clipboard!', {
                     duration: 2000,
