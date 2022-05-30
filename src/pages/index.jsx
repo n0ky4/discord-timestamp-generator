@@ -178,8 +178,7 @@ export default function Home() {
             <div style={{ margin: '25px 0' }}>
                 <Text>Generated Timestamps:</Text>
                 <Text muted>
-                    To use it, copy the code on the left then paste it on your message or profile
-                    bio.
+                    Click on the left code to copy, then paste it on your message or profile bio.
                 </Text>
                 <div>
                     <TimestampContainer>
