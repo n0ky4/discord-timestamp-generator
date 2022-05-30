@@ -9,7 +9,7 @@ const InputStyle = styled.input`
     border: 1px solid ${(props) => props.theme.colors.text_input_border};
     &:focus {
         outline: none;
-        border: 1px solid ${(props) => props.theme.colors.primary};
+        border: 1px solid ${(props) => props.theme.colors.blurple};
     }
     font-size: 16px;
     outline: 0;

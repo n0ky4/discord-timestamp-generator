@@ -1,3 +1,4 @@
+import { useTheme } from 'styled-components'
 import styled from 'styled-components'
 import toast from 'react-hot-toast'
 import { copyToClipboard } from '../../util/copyToClipboard'
@@ -21,6 +22,8 @@ const CodeBlockStyle = styled.code`
 `
 
 export default function CodeBlock(props) {
+    const theme = useTheme()
+
     function copyText(text) {
         copyToClipboard(text)
             .then(() => {
@@ -30,14 +33,14 @@ export default function CodeBlock(props) {
                     style: {
                         fontSize: '16px',
                         borderRadius: '3px',
-                        border: '1px solid #5865f2',
+                        border: `1px solid ${theme.colors.blurple}`,
                         padding: '10px',
-                        color: '#fff',
-                        background: '#2e3338',
+                        color: theme.colors.header_primary,
+                        background: theme.colors.background_secondary,
                     },
                     iconTheme: {
-                        primary: '#5865f2',
-                        secondary: '#FFFAEE',
+                        primary: theme.colors.blurple,
+                        secondary: theme.colors.header_primary,
                     },
                 })
             })
@@ -49,14 +52,14 @@ export default function CodeBlock(props) {
                     style: {
                         fontSize: '16px',
                         borderRadius: '3px',
-                        border: '1px solid #ed4245',
+                        border: `1px solid ${theme.colors.red}`,
                         padding: '10px',
-                        color: '#fff',
-                        background: '#2e3338',
+                        color: theme.colors.header_primary,
+                        background: theme.colors.background_secondary,
                     },
                     iconTheme: {
-                        primary: '#ed4245',
-                        secondary: '#FFFAEE',
+                        primary: theme.colors.red,
+                        secondary: theme.colors.header_primary,
                     },
                 })
             })
