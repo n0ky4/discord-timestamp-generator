@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
+import { Toaster } from 'react-hot-toast'
 
 import Home from './pages/index'
 import GlobalStyle from './styles/global'
 import theme from './styles/theme'
 
-import { Toaster } from 'react-hot-toast'
+import './i18n'
 
-const root = ReactDOM.createRoot(document.getElementById('app'))
-root.render(
+const app = ReactDOM.createRoot(document.getElementById('app'))
+app.render(
     <ThemeProvider theme={theme}>
         <Toaster />
         <GlobalStyle />

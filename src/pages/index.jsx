@@ -13,6 +13,7 @@ import { dateToUnix, getMomentFormat } from '../util/date'
 import Moment from 'react-moment'
 import 'moment'
 import 'moment/min/locales'
+import i18n, { t } from 'i18next'
 
 const TimestampContainer = (props) => {
     return (
@@ -30,16 +31,10 @@ const TimestampContainer = (props) => {
 }
 
 export default function Home() {
-    const yearRef = useRef(null)
-    const monthRef = useRef(null)
-    const dayRef = useRef(null)
-    const hourRef = useRef(null)
-    const minuteRef = useRef(null)
-    const secondRef = useRef(null)
-    const timestampRef = useRef(null)
+    const timestamp = useRef(null)
     const [date, setDate] = useState(new Date())
 
-    const momentLocale = navigator.languages[0].toLowerCase()
+    const momentLocale = i18n.language.toLowerCase()
 
     function validate(value, type) {
         value = value.replace(/[^0-9]/g, '')
@@ -52,13 +47,19 @@ export default function Home() {
         return true
     }
 
+    function getElements() {
+        const year = document.querySelector('#YYYY')
+        const month = document.querySelector('#MM')
+        const day = document.querySelector('#DD')
+        const hour = document.querySelector('#hh')
+        const minute = document.querySelector('#mm')
+        const second = document.querySelector('#ss')
+
+        return { year, month, day, hour, minute, second }
+    }
+
     function handleDateChange(e) {
-        const year = yearRef.current
-        const month = monthRef.current
-        const day = dayRef.current
-        const hour = hourRef.current
-        const minute = minuteRef.current
-        const second = secondRef.current
+        const { year, month, day, hour, minute, second } = getElements()
 
         if (
             !validate(year.value, 'year') ||
@@ -83,14 +84,8 @@ export default function Home() {
     }
 
     useEffect(() => {
+        const { year, month, day, hour, minute, second } = getElements()
         let _date = new Date()
-
-        const year = yearRef.current
-        const month = monthRef.current
-        const day = dayRef.current
-        const hour = hourRef.current
-        const minute = minuteRef.current
-        const second = secondRef.current
 
         function updateDate() {
             if (
@@ -108,83 +103,39 @@ export default function Home() {
 
         updateDate()
         setInterval(updateDate, 100)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
         <Container>
             <div>
                 <Heading>Discord Timestamp Generator</Heading>
-                <Text muted>
-                    This is a simple tool to generate Discord timestamps. You can use it on messages
-                    or in your profile bio!
-                </Text>
+                <Text muted>{t('description')}</Text>
             </div>
-            <div style={{ margin: '25px 0' }}>
-                <Text>Date:</Text>
+            <div style={{ margin: '18px 0' }}>
+                <Text>{t('date')}:</Text>
                 <div style={{ display: 'flex', gap: '6px' }}>
-                    <Input
-                        type='number'
-                        placeholder='Year'
-                        max='9999'
-                        step='1'
-                        ref={yearRef}
-                        onChange={handleDateChange}
-                    />
-                    <Input
-                        type='number'
-                        placeholder='Month'
-                        min='01'
-                        max='12'
-                        step='1'
-                        ref={monthRef}
-                        onChange={handleDateChange}
-                    />
-                    <Input
-                        type='number'
-                        placeholder='Day'
-                        min='01'
-                        max='31'
-                        step='1'
-                        ref={dayRef}
-                        onChange={handleDateChange}
-                    />
-                    <Input
-                        type='number'
-                        placeholder='Hour (24h)'
-                        min='00'
-                        max='23'
-                        step='1'
-                        ref={hourRef}
-                        onChange={handleDateChange}
-                    />
-                    <Input
-                        type='number'
-                        placeholder='Minutes'
-                        min='00'
-                        max='59'
-                        step='1'
-                        ref={minuteRef}
-                        onChange={handleDateChange}
-                    />
-                    <Input
-                        type='number'
-                        placeholder='Seconds'
-                        min='00'
-                        max='59'
-                        step='1'
-                        ref={secondRef}
-                        onChange={handleDateChange}
-                    />
+                    {t('dateInputFormat')
+                        .split('-')
+                        .map((item, index) => {
+                            return (
+                                <Input
+                                    key={index}
+                                    id={item}
+                                    type='number'
+                                    placeholder={t(item)}
+                                    onChange={handleDateChange}
+                                />
+                            )
+                        })}
                 </div>
-                <Text muted ref={timestampRef}>
-                    UNIX timestamp: {Math.floor(date.getTime() / 1000)}
+                <Text muted ref={timestamp}>
+                    {t('unixTimestamp')}: {dateToUnix(date)}
                 </Text>
             </div>
-            <div style={{ margin: '25px 0' }}>
-                <Text>Generated Timestamps:</Text>
-                <Text muted>
-                    Click on the left code to copy, then paste it on your message or profile bio.
-                </Text>
+            <div style={{ margin: '18px 0' }}>
+                <Text>{t('generatedTimestamps')}:</Text>
+                <Text muted>{t('instructions')}</Text>
                 <div>
                     <TimestampContainer>
                         <CodeBlock copyOnClick>{`<t:${dateToUnix(date)}>`}</CodeBlock>
