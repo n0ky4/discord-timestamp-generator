@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
         background: ${(props) => props.theme.colors.background_tertiary};
         border-radius: 999px;
     }
+
+    a {
+        color: inherit;
+    }
 `
 
 export default GlobalStyle

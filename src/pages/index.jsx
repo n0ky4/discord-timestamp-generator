@@ -117,7 +117,21 @@ export default function Home() {
                         justifyContent: 'space-between',
                     }}
                 >
-                    <Heading>Discord Timestamp Generator</Heading>
+                    <a
+                        href='https://github.com/umgustavo/discord-timestamp-generator'
+                        target='_blank'
+                        rel='noreferrer'
+                        style={{ display: 'flex', gap: '16px', alignItems: 'center' }}
+                    >
+                        <img
+                            src='/github.svg'
+                            alt='GitHub'
+                            width='32px'
+                            height='32px'
+                            draggable={false}
+                        />
+                        <Heading>Discord Timestamp Generator</Heading>
+                    </a>
                     <LanguageSelect />
                 </div>
                 <Text muted>{t('description')}</Text>
