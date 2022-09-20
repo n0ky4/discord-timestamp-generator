@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 // Locales
 import en from './locales/en.json'
 import pt_BR from './locales/pt-BR.json'
+import ru_RU from './locales/ru-RU.json'
 
 i18n.use(LanguageDetector)
     .use(initReactI18next)
@@ -27,9 +28,10 @@ i18n.use(LanguageDetector)
         },
         resources: {
             en,
-            'pt-BR': pt_BR,
+            'pt-BR': pt_BR, 
+			'ru-RU': ru_RU
         },
-        supportedLngs: ['en', 'pt-BR'],
+        supportedLngs: ['en', 'pt-BR', 'ru-RU'],
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,
