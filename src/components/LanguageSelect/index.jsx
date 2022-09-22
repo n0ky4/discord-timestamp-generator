@@ -47,6 +47,7 @@ export default function LanguageSelect(props) {
     const availableLanguages = {
         en: 'English',
         'pt-BR': 'Português',
+		'ru-RU': 'Русский язык',
     }
 
     function handleLanguageChange(e) {
