@@ -6,7 +6,7 @@
         "YYYY": "Año",
         "MM": "Mes",
         "DD": "Día",
-        "hh": "Hora (24h)",
+        "hh": "Hora (24 h)",
         "mm": "Minutos",
         "ss": "Segundos",
         "unixTimestamp": "Marca de tiempo UNIX",
