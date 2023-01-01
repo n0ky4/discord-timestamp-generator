@@ -46,6 +46,7 @@ export default function LanguageSelect(props) {
     const currentLanguage = i18n.language
     const availableLanguages = {
         en: 'English',
+        'es-ES': 'Español',
         'pt-BR': 'Português',
 		'ru-RU': 'Русский язык',
     }
