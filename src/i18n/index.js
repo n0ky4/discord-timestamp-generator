@@ -31,7 +31,7 @@ i18n.use(LanguageDetector)
             en,
             'es-ES': es_ES,
             'pt-BR': pt_BR, 
-			'ru-RU': ru_RU
+            'ru-RU': ru_RU
         },
         supportedLngs: ['en', 'es-ES', 'pt-BR', 'ru-RU'],
         fallbackLng: 'en',
