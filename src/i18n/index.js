@@ -7,6 +7,7 @@ import en from './locales/en.json'
 import es_ES from './locales/es-ES.json'
 import pt_BR from './locales/pt-BR.json'
 import ru_RU from './locales/ru-RU.json'
+import de_DE from './locales/de-DE.json'
 
 i18n.use(LanguageDetector)
     .use(initReactI18next)
@@ -31,9 +32,10 @@ i18n.use(LanguageDetector)
             en,
             'es-ES': es_ES,
             'pt-BR': pt_BR, 
-            'ru-RU': ru_RU
+            'ru-RU': ru_RU,
+            'de-DE': de_DE
         },
-        supportedLngs: ['en', 'es-ES', 'pt-BR', 'ru-RU'],
+        supportedLngs: ['en', 'es-ES', 'pt-BR', 'ru-RU', 'de-DE'],
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,
