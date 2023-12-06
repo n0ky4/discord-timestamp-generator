@@ -49,6 +49,7 @@ export default function LanguageSelect(props) {
         'es-ES': 'Español',
         'pt-BR': 'Português',
 		'ru-RU': 'Русский язык',
+        'de-DE': 'Deutsch',
     }
 
     function handleLanguageChange(e) {
