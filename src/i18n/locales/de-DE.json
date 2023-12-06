@@ -1,5 +1,6 @@
 {
     "translation": {
+        "langName": "Deutsch",
         "dateInputFormat": "DD-MM-YYYY-hh-mm-ss",
         "description": "Dies ist ein einfaches Werkzeug um Discord Zeitstempel zu erstellen. Du kannst es in Nachrichten oder in deinem Profil benutzen.",
         "date": "Datum",

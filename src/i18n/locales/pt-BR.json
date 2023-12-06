@@ -1,5 +1,6 @@
 {
     "translation": {
+        "langName": "Português",
         "dateInputFormat": "DD-MM-YYYY-hh-mm-ss",
         "description": "Esta é uma ferramenta simples para gerar timestamps no Discord. Você pode usá-las em mensagens ou na bio do seu perfil!",
         "date": "Data",

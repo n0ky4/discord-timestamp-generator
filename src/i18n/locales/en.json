@@ -1,5 +1,6 @@
 {
     "translation": {
+        "langName": "English",
         "dateInputFormat": "YYYY-MM-DD-hh-mm-ss",
         "description": "This is a simple tool to generate Discord timestamps. You can use it on messages or in your profile bio!",
         "date": "Date",

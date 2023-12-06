@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import i18n from './../../i18n'
+import i18n, { langNames } from './../../i18n'
 
 const SelectStyle = styled.div`
     position: relative;
@@ -44,13 +44,7 @@ export default function LanguageSelect(props) {
     const selectRef = useRef(null)
 
     const currentLanguage = i18n.language
-    const availableLanguages = {
-        en: 'English',
-        'es-ES': 'Español',
-        'pt-BR': 'Português',
-		'ru-RU': 'Русский язык',
-        'de-DE': 'Deutsch',
-    }
+    const langLabel = langNames[currentLanguage]
 
     function handleLanguageChange(e) {
         i18n.changeLanguage(e.target.getAttribute('data-language'))
@@ -68,24 +62,24 @@ export default function LanguageSelect(props) {
         return () => {
             document.removeEventListener('click', handleClickOutside)
         }
-    })
+    }, [])
 
     return (
         <SelectStyle {...props} onClick={() => setIsOpen(!isOpen)} ref={selectRef}>
-            {availableLanguages[currentLanguage]}
+            {langLabel}
             <SelectOptions open={isOpen}>
                 <div
                     key={currentLanguage}
                     data-language={currentLanguage}
                     onClick={handleLanguageChange}
                 >
-                    {availableLanguages[currentLanguage]}
+                    {langLabel}
                 </div>
-                {Object.keys(availableLanguages)
+                {Object.keys(langNames)
                     .filter((x) => x !== currentLanguage)
                     .map((language) => (
                         <div key={language} data-language={language} onClick={handleLanguageChange}>
-                            {availableLanguages[language]}
+                            {langNames[language]}
                         </div>
                     ))}
             </SelectOptions>

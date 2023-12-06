@@ -1,5 +1,6 @@
 {
     "translation": {
+        "langName": "Español",
         "dateInputFormat": "DD-MM-YYYY-hh-mm-ss",
         "description": "Esta es una herramienta simple para generar marcas de tiempo para Discord. ¡Puedes usarla en mensajes o en la biografía de tu perfil!",
         "date": "Fecha",
