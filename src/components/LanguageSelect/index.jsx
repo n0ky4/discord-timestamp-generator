@@ -13,6 +13,7 @@ const SelectStyle = styled.div`
     font-weight: 500;
     padding: 6px;
     width: 130px;
+    user-select: none;
 `
 
 const SelectOptions = styled.div`
