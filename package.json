@@ -1,7 +1,7 @@
 {
     "name": "discord-timestamp-generator",
     "version": "1.0.0",
-    "author": "gustavo <https://github.com/umgustavo>",
+    "author": "guko <https://github.com/gukodev>",
     "repository": {
         "type": "git",
         "url": "https://github.com/umgustavo/discord-timestamp-generator.git"
