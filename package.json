@@ -4,7 +4,7 @@
     "author": "guko <https://github.com/gukodev>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/umgustavo/discord-timestamp-generator.git"
+        "url": "https://github.com/gukodev/discord-timestamp-generator.git"
     },
     "license": "MIT",
     "scripts": {
