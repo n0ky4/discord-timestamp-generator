@@ -118,7 +118,7 @@ export default function Home() {
                     }}
                 >
                     <a
-                        href='https://github.com/umgustavo/discord-timestamp-generator'
+                        href='https://github.com/gukodev/discord-timestamp-generator'
                         target='_blank'
                         rel='noreferrer'
                         style={{ display: 'flex', gap: '16px', alignItems: 'center' }}
