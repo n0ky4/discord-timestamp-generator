@@ -12,6 +12,8 @@ import en from './locales/en.json'
 import es_ES from './locales/es-ES.json'
 import pt_BR from './locales/pt-BR.json'
 import ru_RU from './locales/ru-RU.json'
+import zh_CN from './locales/zh-CN.json'
+import zh_TW from './locales/zh_TW.json'
 
 // 4. Add the new locale to the `locales` object below.
 // PS: The key should be the locale code and the value should be the imported file from step 2
@@ -21,6 +23,8 @@ const locales = {
     'pt-BR': pt_BR,
     'ru-RU': ru_RU,
     'de-DE': de_DE,
+    'zh-CN': zh_CN,
+    'zh-TW': zh_TW,
 }
 
 export const langNames = Object.entries(locales).reduce((acc, [key, value]) => {
