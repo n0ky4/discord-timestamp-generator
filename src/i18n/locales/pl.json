@@ -1,0 +1,19 @@
+{
+    "translation": {
+        "langName": "Polski",
+        "dateInputFormat": "YYYY-MM-DD-hh-mm-ss",
+        "description": "Proste narzędzie do generowania stopek czasu na platformie Discord. Możesz użyć ich w BIO!",
+        "date": "Data",
+        "YYYY": "Rok",
+        "MM": "Miesiąc",
+        "DD": "Dzień",
+        "hh": "Godzina",
+        "mm": "Minuty",
+        "ss": "Sekundy",
+        "unixTimestamp": "Stopka UNIX",
+        "generatedTimestamps": "Wygenerowane stopki",
+        "instructions": "Kliknij lewym przyciskiem myszy, aby skopiować. Następnie wklej w swojej wiadomości lub BIO.",
+        "copiedToClipboard": "Skopiowano do schowka!",
+        "clipboardCopyError": "Nie można skopiować :("
+    }
+}
