@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "langName": "國語",
+        "flagEmoji": "🇹🇼",
+        "defaultDateFormat": "YYYY-MM-DD-hh-mm-ss",
+        "description": "用於產生 Discord 時間戳記的小工具。 可以用在自我介紹裡面！",
+        "date": "日期",
+        "YYYY": "年",
+        "MM": "月",
+        "DD": "日",
+        "hh": "時（24h）",
+        "mm": "分",
+        "ss": "秒",
+        "unixTimestamp": "Unix 時間戳記",
+        "generatedTimestamps": "輸出時間戳記",
+        "instructions": "點選左側程式碼複製，然後黏貼到訊息或自我介紹裡。",
+        "copiedToClipboard": "已複製到剪貼簿！",
+        "clipboardCopyError": "無法複製到剪貼簿（悲"
+    }
+}

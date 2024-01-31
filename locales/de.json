@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "langName": "Deutsch",
+        "flagEmoji": "🇩🇪",
+        "defaultDateFormat": "DD-MM-YYYY-hh-mm-ss",
+        "description": "Dies ist ein einfaches Werkzeug um Discord Zeitstempel zu erstellen. Du kannst es in Nachrichten oder in deinem Profil benutzen.",
+        "date": "Datum",
+        "YYYY": "Jahr",
+        "MM": "Monat",
+        "DD": "Tag",
+        "hh": "Stunde (24h)",
+        "mm": "Minuten",
+        "ss": "Sekunden",
+        "unixTimestamp": "Unix Zeitstempel",
+        "generatedTimestamps": "Generierte Zeitstempel",
+        "instructions": "Klicke auf den linken Code um ihn zu kopieren. Du kannst ihn dann in deinem Profil oder in Nachrichten benutzen.",
+        "copiedToClipboard": "In Zwischenablage kopiert!",
+        "clipboardCopyError": "Konnte nicht in die Zwischenablage kopiert werden :("
+    }
+}
