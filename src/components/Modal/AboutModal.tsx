@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import { Contributor } from '../util/contributors'
-import Button from './Button'
-import Contributors from './Contributors'
-import Label from './Label'
-import Link from './Link'
+import { Contributor } from '../../util/contributors'
+import Button from '../Button/Button'
+import Contributors from '../Contributors'
+import Label from '../Label'
+import Link from '../Link'
 import Modal, { ModalContent, ModalFooter, ModalHeader } from './Modal'
 
 interface AboutModalProps {

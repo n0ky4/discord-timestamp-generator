@@ -3,7 +3,7 @@ import { X } from '@phosphor-icons/react'
 import { Fragment, PropsWithChildren, forwardRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { twMerge } from 'tailwind-merge'
-import IconButton from './IconButton'
+import IconButton from '../Button/IconButton'
 
 interface ModalProps {
     children: React.ReactNode

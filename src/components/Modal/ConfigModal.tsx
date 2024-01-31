@@ -1,12 +1,12 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useDateFormat } from '../context/dateFormat'
-import Button from './Button'
-import DateFormatSelect from './DateFormatSelect'
-import Label from './Label'
-import LanguageSelect from './LanguageSelect'
+import { useDateFormat } from '../../context/dateFormat'
+import Button from '../Button/Button'
+import Label from '../Label'
+import DateFormatSelect from '../Select/DateFormatSelect'
+import LanguageSelect from '../Select/LanguageSelect'
+import ThemeSelect from '../Select/ThemeSelect'
 import Modal, { ModalContent, ModalFooter, ModalHeader } from './Modal'
-import ThemeSelect from './ThemeSelect'
 
 interface ConfigModalProps {
     show: boolean
