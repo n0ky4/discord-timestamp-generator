@@ -15,6 +15,19 @@
         "generatedTimestamps": "輸出時間戳記",
         "instructions": "點選左側程式碼複製，然後黏貼到訊息或自我介紹裡。",
         "copiedToClipboard": "已複製到剪貼簿！",
-        "clipboardCopyError": "無法複製到剪貼簿（悲"
+        "clipboardCopyError": "無法複製到剪貼簿（悲",
+        "language": "語言",
+        "languageUpdated": "語言已成功更新！",
+        "theme": "主題",
+        "close": "關閉",
+        "settings": "設定",
+        "nuhuh": "不呃！",
+        "yay": "好耶！",
+        "darkTheme": "深色",
+        "lightTheme": "淺色",
+        "about": "關於",
+        "disclaimer": "此應用程式不隸屬於Discord抑或是被Discord認可。Discord為美國Discord公司（Discord Inc.）之註冊商標",
+        "dateFormat": "日期格式",
+        "auto": "自動"
     }
 }
