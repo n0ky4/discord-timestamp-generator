@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
-import { VitePWA } from 'vite-plugin-pwa'
 
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -36,17 +33,6 @@ export default {
         },
     },
     plugins: [
-        VitePWA({
-            registerType: 'autoUpdate',
-            manifest: {
-                name: 'Discord Timestamp Generator',
-                description:
-                    'With Discord Timestamp Generator, you can generate Discord timestamps in multiple formats and use it on your message/profile bio.',
-                theme_color: '#5468ff',
-                start_url: '/',
-                display: 'standalone',
-            },
-        }),
         require('@headlessui/tailwindcss'),
         require('@headlessui/tailwindcss')({ prefix: 'ui' }),
     ],
