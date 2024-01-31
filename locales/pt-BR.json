@@ -1,0 +1,33 @@
+{
+    "translation": {
+        "langName": "Português do Brasil",
+        "flagEmoji": "🇧🇷",
+        "defaultDateFormat": "DD-MM-YYYY-hh-mm-ss",
+        "description": "Esta é uma ferramenta simples para gerar timestamps no Discord. Você pode usá-las em mensagens ou na bio do seu perfil!",
+        "date": "Data",
+        "YYYY": "Ano",
+        "MM": "Mês",
+        "DD": "Dia",
+        "hh": "Hora (24h)",
+        "mm": "Minutos",
+        "ss": "Segundos",
+        "unixTimestamp": "Timestamp Unix",
+        "generatedTimestamps": "Timestamps gerados",
+        "instructions": "Clique no código à esquerda para copiar, depois cole para sua mensagem ou bio do perfil.",
+        "copiedToClipboard": "Copiado!",
+        "clipboardCopyError": "Não foi possível copiar :(",
+        "language": "Idioma",
+        "languageUpdated": "Idioma alterado com sucesso!",
+        "theme": "Tema",
+        "close": "Fechar",
+        "settings": "Configurações",
+        "nuhuh": "nananinanão!",
+        "yay": "eba!",
+        "darkTheme": "Escuro",
+        "lightTheme": "Claro",
+        "about": "Sobre",
+        "disclaimer": "este app não é endossado ou afiliado ao Discord. Discord é uma marca registrada de Discord, Inc.",
+        "dateFormat": "Formato da data",
+        "auto": "Automático"
+    }
+}

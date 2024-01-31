@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "langName": "Español",
+        "flagEmoji": "🇪🇸",
+        "defaultDateFormat": "DD-MM-YYYY-hh-mm-ss",
+        "description": "Esta es una herramienta simple para generar marcas de tiempo para Discord. ¡Puedes usarla en mensajes o en la biografía de tu perfil!",
+        "date": "Fecha",
+        "YYYY": "Año",
+        "MM": "Mes",
+        "DD": "Día",
+        "hh": "Hora (24 h)",
+        "mm": "Minutos",
+        "ss": "Segundos",
+        "unixTimestamp": "Marca de tiempo Unix",
+        "generatedTimestamps": "Marcas de tiempo generadas",
+        "instructions": "Haz clic en el código de la izquierda para copiarlo, luego pégalo en tu mensaje o en la biografía de tu perfil.",
+        "copiedToClipboard": "¡Copiado al portapapeles!",
+        "clipboardCopyError": "No se pudo copiar al portapapeles :("
+    }
+}

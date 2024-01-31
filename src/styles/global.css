@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-400 text-color-600;
+}
+
+::selection {
+    @apply bg-blurple-400 text-color-300;
+}
+
+.ease-elastic {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.custom-scroll::-webkit-scrollbar {
+    @apply w-1;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+}
+
+@keyframes animation-shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-shake {
+    animation: animation-shake 0.15s ease-in-out infinite;
+}
+
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.rainbow-text {
+    color: #ff9191; /* this is a very beautiful color */
+    animation: hue-rotate 1s linear infinite;
+}
+
+/* hide input arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    @apply focus:ring-2 focus:ring-white/90 focus:outline-none;
+}
