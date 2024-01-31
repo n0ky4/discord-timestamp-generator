@@ -15,6 +15,19 @@
         "generatedTimestamps": "输出时间戳",
         "instructions": "点击左侧代码复制，然后粘贴到消息或自我介绍里。",
         "copiedToClipboard": "已复制到剪贴板！",
-        "clipboardCopyError": "无法复制到剪贴板（悲"
+        "clipboardCopyError": "无法复制到剪贴板（悲",
+        "language": "语言",
+        "languageUpdated": "语言已成功更新！",
+        "theme": "主题",
+        "close": "关闭",
+        "settings": "设置",
+        "nuhuh": "呃呃!",
+        "yay": "好耶！",
+        "darkTheme": "深色",
+        "lightTheme": "浅色",
+        "about": "关于",
+        "disclaimer": "此应用不附属于Discord抑或是被Discord认可。Discord为美国Discord公司（Discord Inc.）的注册商标。",
+        "dateFormat": "日期格式",
+        "auto": "自动"
     }
 }
