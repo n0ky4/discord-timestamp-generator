@@ -6,7 +6,7 @@ import Label from '../Label'
 import DateFormatSelect from '../Select/DateFormatSelect'
 import LanguageSelect from '../Select/LanguageSelect'
 import ThemeSelect from '../Select/ThemeSelect'
-import Modal, { ModalContent, ModalFooter, ModalHeader } from './Modal'
+import Modal from './Modal'
 
 interface ConfigModalProps {
     show: boolean
@@ -28,8 +28,8 @@ export default function ConfigModal({ show, onClose }: ConfigModalProps) {
 
     return (
         <Modal show={show} onClose={onClose} ref={configModalRef}>
-            <ModalHeader title={t('settings')} onClose={onClose} />
-            <ModalContent className='flex flex-col gap-4'>
+            <Modal.Header title={t('settings')} onClose={onClose} />
+            <Modal.Content className='flex flex-col gap-4'>
                 <div>
                     <Label>{t('language')}</Label>
                     <LanguageSelect />
@@ -42,12 +42,12 @@ export default function ConfigModal({ show, onClose }: ConfigModalProps) {
                     <Label>{t('dateFormat')}</Label>
                     <DateFormatSelect value={dateFormat} onChange={setDateFormat} />
                 </div>
-            </ModalContent>
-            <ModalFooter>
+            </Modal.Content>
+            <Modal.Footer>
                 <Button theme='gray' onClick={onClose}>
                     {t('close')}
                 </Button>
-            </ModalFooter>
+            </Modal.Footer>
         </Modal>
     )
 }
