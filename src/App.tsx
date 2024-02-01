@@ -195,7 +195,13 @@ function App() {
             </div>
             <Toaster
                 toastOptions={{
-                    className: 'toaster', // custom class inside styles/global.css cause tailwind classes doenst work here for some reason
+                    // using style cause tailwind classes doesn't work for some reason
+                    style: {
+                        background: '#2b2d31',
+                        color: '#f2f3f5',
+                        border: '1px solid #3f4147',
+                        userSelect: 'none',
+                    },
                     error: {
                         iconTheme: {
                             primary: '#ed4245',

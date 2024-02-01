@@ -31,12 +31,6 @@
     }
 }
 
-@layer components {
-    .toaster {
-        @apply bg-gray-500 text-color-300 border border-gray-300 select-none;
-    }
-}
-
 @layer utilities {
     @keyframes animation-shake {
         0% {
