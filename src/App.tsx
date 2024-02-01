@@ -180,7 +180,7 @@ function App() {
                         <p>{t('instructions')}</p>
                         <div className='flex flex-col gap-1 mt-2'>
                             {DISCORD_FORMATS.map((format) => (
-                                <div key={format} className='flex items-center gap-2'>
+                                <div key={format || 'none'} className='flex items-center gap-2'>
                                     <CodeBlock>{`<t:${moment(date).unix()}${
                                         format ? `:${format}` : ''
                                     }>`}</CodeBlock>
