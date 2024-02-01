@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
 import Twemoji from 'react-twemoji'
-import { LocaleKeys, locales, missingKeys } from '../util/locales'
-import Link from './Link'
+import { LocaleKeys, locales, missingKeys } from '../../util/locales'
+import Link from '../Link'
 import { SelectButton, SelectOption, SelectOptions } from './Select'
 
 // typescript in a nutshell

@@ -1,14 +1,28 @@
 import { Transition } from '@headlessui/react'
 import { X } from '@phosphor-icons/react'
-import { Fragment, PropsWithChildren, forwardRef, useEffect } from 'react'
+import {
+    ForwardRefExoticComponent,
+    Fragment,
+    PropsWithChildren,
+    RefAttributes,
+    forwardRef,
+    useEffect,
+} from 'react'
 import { useTranslation } from 'react-i18next'
 import { twMerge } from 'tailwind-merge'
-import IconButton from './IconButton'
+import IconButton from '../Button/IconButton'
 
 interface ModalProps {
     children: React.ReactNode
     show: boolean
     onClose: () => void
+}
+
+interface ModalComponent
+    extends ForwardRefExoticComponent<ModalProps & RefAttributes<HTMLDivElement>> {
+    Header: typeof ModalHeader
+    Content: typeof ModalContent
+    Footer: typeof ModalFooter
 }
 
 interface ModalHeaderProps {
@@ -17,7 +31,11 @@ interface ModalHeaderProps {
     onClose?: () => void
 }
 
-export function ModalHeader({ title, hideCloseButton = false, onClose }: ModalHeaderProps) {
+interface ModalContentProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode
+}
+
+function ModalHeader({ title, hideCloseButton = false, onClose }: ModalHeaderProps) {
     const { t } = useTranslation()
 
     return (
@@ -34,10 +52,7 @@ export function ModalHeader({ title, hideCloseButton = false, onClose }: ModalHe
     )
 }
 
-interface ModalContentProps extends React.HTMLAttributes<HTMLDivElement> {
-    children: React.ReactNode
-}
-export function ModalContent({ children, className, ...rest }: ModalContentProps) {
+function ModalContent({ children, className, ...rest }: ModalContentProps) {
     return (
         <div className={twMerge('px-4 py-6', className)} {...rest}>
             {children}
@@ -45,7 +60,7 @@ export function ModalContent({ children, className, ...rest }: ModalContentProps
     )
 }
 
-export function ModalFooter({ children }: PropsWithChildren) {
+function ModalFooter({ children }: PropsWithChildren) {
     return (
         <div className='w-full p-4 bg-gray-500 flex items-center justify-end gap-2 rounded-b-md'>
             {children}
@@ -59,17 +74,16 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, children, onClose 
             if (e.key === 'Escape') onClose()
         }
 
-        if (show) document.addEventListener('keydown', handleEscape)
+        document.addEventListener('keydown', handleEscape)
 
         return () => document.removeEventListener('keydown', handleEscape)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [show])
+    }, [onClose])
 
     return (
         <Transition.Root
             show={show}
             className='fixed z-50 w-screen h-screen flex items-center justify-center p-4'
-            // appear={true}
+            as='div'
         >
             <Transition.Child
                 as={Fragment}
@@ -96,7 +110,11 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, children, onClose 
             />
         </Transition.Root>
     )
-})
+}) as ModalComponent
+
 Modal.displayName = 'Modal'
+Modal.Header = ModalHeader
+Modal.Content = ModalContent
+Modal.Footer = ModalFooter
 
 export default Modal

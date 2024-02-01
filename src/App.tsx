@@ -3,13 +3,13 @@ import moment from 'moment'
 import { useEffect, useRef, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
-import AboutModal from './components/AboutModal'
+import IconButton from './components/Button/IconButton'
 import CodeBlock from './components/CodeBlock'
-import ConfigModal from './components/ConfigModal'
 import Disclaimer from './components/Disclaimer'
-import IconButton from './components/IconButton'
 import Input from './components/Input'
 import Label from './components/Label'
+import AboutModal from './components/Modal/AboutModal'
+import ConfigModal from './components/Modal/ConfigModal'
 import Timestamp from './components/Timestamp'
 import { DateFormat, DateFormatPart, useDateFormat } from './context/dateFormat'
 import { Contributor, getContributors } from './util/contributors'
@@ -195,7 +195,7 @@ function App() {
             </div>
             <Toaster
                 toastOptions={{
-                    className: 'bg-gray-500 text-color-300 border border-gray-300 select-none',
+                    className: 'toaster', // custom class inside styles/global.css cause tailwind classes doenst work here for some reason
                     error: {
                         iconTheme: {
                             primary: '#ed4245',

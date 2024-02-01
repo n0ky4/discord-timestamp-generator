@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { Contributor } from '../util/contributors'
-import Button from './Button'
-import Contributors from './Contributors'
-import Label from './Label'
-import Link from './Link'
-import Modal, { ModalContent, ModalFooter, ModalHeader } from './Modal'
+import { Contributor } from '../../util/contributors'
+import Button from '../Button/Button'
+import Contributors from '../Contributors'
+import Label from '../Label'
+import Link from '../Link'
+import Modal from './Modal'
 
 interface AboutModalProps {
     show: boolean
@@ -23,8 +23,8 @@ export default function AboutModal({ show, contributors, onClose }: AboutModalPr
 
     return (
         <Modal show={show} onClose={onClose}>
-            <ModalHeader title={t('about')} onClose={onClose} />
-            <ModalContent className='py-0 pb-4'>
+            <Modal.Header title={t('about')} onClose={onClose} />
+            <Modal.Content className='py-0 pb-4'>
                 <div className='flex items-center gap-2 py-4'>
                     <a href={authorUrl} target='_blank' rel='noreferrer noopener' title="it's me!">
                         <div
@@ -65,12 +65,12 @@ export default function AboutModal({ show, contributors, onClose }: AboutModalPr
                         </div>
                     )}
                 </div>
-            </ModalContent>
-            <ModalFooter>
+            </Modal.Content>
+            <Modal.Footer>
                 <Button theme='gray' onClick={onClose}>
                     {t('close')}
                 </Button>
-            </ModalFooter>
+            </Modal.Footer>
         </Modal>
     )
 }
