@@ -15,6 +15,19 @@
         "generatedTimestamps": "Generierte Zeitstempel",
         "instructions": "Klicke auf den linken Code um ihn zu kopieren. Du kannst ihn dann in deinem Profil oder in Nachrichten benutzen.",
         "copiedToClipboard": "In Zwischenablage kopiert!",
-        "clipboardCopyError": "Konnte nicht in die Zwischenablage kopiert werden :("
+        "clipboardCopyError": "Konnte nicht in die Zwischenablage kopiert werden :(",
+        "language": "Sprache",
+        "languageUpdated": "Sprache aktualisiert!",
+        "theme": "Aussehen",
+        "close": "Schließen",
+        "settings": "Einstellungen",
+        "nuhuh": "nein nein!",
+        "yay": "jaa!",
+        "darkTheme": "Dunkel",
+        "lightTheme": "Hell",
+        "about": "About",
+        "disclaimer": "Dieses Tool ist nicht von Discord Inc. entwickelt worden und wird auch nicht von ihnen unterstützt. Discord ist eine eingetragene Marke von Discord, Inc.",
+        "dateFormat": "Datums Format",
+        "auto": "Automatisch"
     }
 }
