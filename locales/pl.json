@@ -15,6 +15,19 @@
         "generatedTimestamps": "Wygenerowane stopki",
         "instructions": "Kliknij lewym przyciskiem myszy, aby skopiować. Następnie wklej w swojej wiadomości lub BIO.",
         "copiedToClipboard": "Skopiowano do schowka!",
-        "clipboardCopyError": "Nie można skopiować :("
+        "clipboardCopyError": "Nie można skopiować :(",
+        "language": "Język",
+        "languageUpdated": "Język zmieniony pomyślnie!",
+        "theme": "Motyw",
+        "close": "Zamknij",
+        "settings": "Ustawienia",
+        "nuhuh": "nie ma mowy!",
+        "yay": "hurra!",
+        "darkTheme": "Ciemny",
+        "lightTheme": "Jasny",
+        "about": "O nas",
+        "disclaimer": "ta aplikacja nie jest wspierana ani powiązana z Discordem. Discord to zastrzeżony znak towarowy firmy Discord, Inc.",
+        "dateFormat": "Format daty",
+        "auto": "Automatyczny"
     }
 }
