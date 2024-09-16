@@ -107,6 +107,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(({ show, children, onClose 
                 leaveTo='opacity-0'
                 className='fixed top-0 left-0 z-40 w-screen h-screen bg-black/75'
                 onClick={onClose}
+                as='div'
             />
         </Transition.Root>
     )
