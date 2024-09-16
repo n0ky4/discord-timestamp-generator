@@ -1,2 +1,10 @@
 User-agent: *
 Disallow:
+Allow: /de
+Allow: /en
+Allow: /es-ES
+Allow: /pl
+Allow: /pt-BR
+Allow: /ru
+Allow: /zh-CN
+Allow: /zh-TW

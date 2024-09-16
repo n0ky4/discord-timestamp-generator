@@ -15,6 +15,19 @@
         "generatedTimestamps": "Marcas de tiempo generadas",
         "instructions": "Haz clic en el código de la izquierda para copiarlo, luego pégalo en tu mensaje o en la biografía de tu perfil.",
         "copiedToClipboard": "¡Copiado al portapapeles!",
-        "clipboardCopyError": "No se pudo copiar al portapapeles :("
+        "clipboardCopyError": "No se pudo copiar al portapapeles :(",
+        "language": "Idioma",
+        "languageUpdated": "¡Idioma alterado con éxito!",
+        "theme": "Tema",
+        "close": "Cerrar",
+        "settings": "Configuración",
+        "nuhuh": "¡nanai!",
+        "yay": "¡guay!",
+        "darkTheme": "Oscuro",
+        "lightTheme": "Claro",
+        "about": "Acerca de",
+        "disclaimer": "esta app no está respaldada ni afiliada a Discord. Discord es una marca registrada de Discord, Inc.",
+        "dateFormat": "Formato de fecha",
+        "auto": "Automático"
     }
 }

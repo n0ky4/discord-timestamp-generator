@@ -1,6 +1,5 @@
 import i18next from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { initReactI18next } from 'react-i18next'
 import App from './App.tsx'
@@ -21,18 +20,18 @@ i18next
         detection: {
             order: [
                 'querystring',
+                'path',
                 'localStorage',
                 'cookie',
                 'sessionStorage',
                 'navigator',
                 'htmlTag',
-                'path',
                 'subdomain',
             ],
-            lookupQuerystring: 'lng',
-            lookupCookie: 'lng',
-            lookupLocalStorage: 'lng',
-            lookupSessionStorage: 'lng',
+            lookupQuerystring: 'lang',
+            lookupCookie: 'lang',
+            lookupLocalStorage: 'lang',
+            lookupSessionStorage: 'lang',
         },
         resources: locales,
         supportedLngs: localeKeys,
@@ -40,9 +39,7 @@ i18next
     })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <DateFormatProvider>
-            <App />
-        </DateFormatProvider>
-    </React.StrictMode>
+    <DateFormatProvider>
+        <App />
+    </DateFormatProvider>
 )

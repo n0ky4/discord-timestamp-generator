@@ -1,6 +1,6 @@
 # ⏰ Discord Timestamp Generator
 
-This is a simple website that generates timestamps for Discord. You can try it out [here](https://d.guko.dev/).
+This is a simple website that generates timestamps for Discord. You can try it out [here](https://discord-timestamp-generator.vercel.app/).
 
 ### 💰 Donate
 

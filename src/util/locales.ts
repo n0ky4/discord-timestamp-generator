@@ -33,7 +33,6 @@ export const langNames = Object.entries(locales).reduce(
 
 const englishKeys = Object.keys(en.translation) as (keyof typeof en.translation)[]
 function getMissingKeys(lang: LocaleKeys) {
-    // @ts-expect-error - i hate typescript
     const missingKeys = englishKeys.filter((key) => !locales[lang].translation[key])
     return missingKeys
 }
