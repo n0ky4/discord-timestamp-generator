@@ -4,7 +4,7 @@ This is a simple website that generates timestamps for Discord. You can try it o
 
 ### 💰 Donate
 
-If you like this project, you can support me by [buying me a coffee](https://ko-fi.com/n0ky4) ☕
+If you like this project, you can support me by [buying me a coffee](https://ko-fi.com/nokya) ☕
 
 ### 👥 Contribute
 
